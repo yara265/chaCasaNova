@@ -135,8 +135,8 @@ function renderQRCode(text) {
       typeNumber: 10,
       width: 170,
       height: 170,
-      colorDark : '#e5e7eb',
-      colorLight : '#0b1020',
+      colorDark : '#47363b',
+      colorLight : '#ffffff',
       correctLevel : QRCode.CorrectLevel.M
     });
   } catch (e) {

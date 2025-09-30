@@ -1,43 +1,45 @@
 <!doctype html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Presentear | Chá de Casa Nova</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Presentear | Chá de Casa Nova</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header class="header">
-    <h1>Finalize seu presente</h1>
-    <p>Confira o item e pague via PIX.</p>
-  </header>
+    <header class="header">
+        <h1>Finalize seu presente</h1>
+        <p>Confira o item e pague via PIX.</p>
+    </header>
 
-  <main class="container gift">
-    <section class="products" id="productPane"></section>
+    <main class="container gift">
+        <section class="products" id="productPane"></section>
 
-    <section class="payment" id="payment">
-      <h2>Pagamento via PIX</h2>
-      <div class="qr-area">
-        <div id="qrcode"></div>
-        <div class="payload">
-          <label>PIX Copia e Cola</label>
-          <textarea id="pixPayload" readonly></textarea>
-          <div class="actions">
-            <a href="index.html" class="secondary" style="display:inline-block;text-decoration:none;padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:#0b1020;color:var(--text);">Voltar</a>
-            <button id="copyBtn">Copiar</button>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+        <section class="payment" id="payment">
+            <h2>Pagamento via PIX</h2>
+            <div class="qr-area">
+                <div id="qrcode"></div>
+                <div class="payload">
+                    <label>PIX Copia e Cola</label>
+                    <textarea id="pixPayload" readonly></textarea>
+                    <div class="actions">
+                        <a href="index.html" class="secondary"
+                            style="display:inline-block;text-decoration:none;padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:#0b1020;color:var(--text);">Voltar</a>
+                        <button id="copyBtn">Copiar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <footer class="footer">
-    <small>Com carinho 💛</small>
-  </footer>
+    <footer class="footer">
+        <small>Com carinho 💛</small>
+    </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-  <script src="gift.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="gift.js"></script>
 </body>
+
 </html>
-
-

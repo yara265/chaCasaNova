@@ -1,12 +1,14 @@
 :root {
-  --bg: #0f172a;
-  --card: #111827;
-  --text: #e5e7eb;
-  --muted: #94a3b8;
-  --accent: #34d399;
-  --accent-2: #22d3ee;
-  --danger: #ef4444;
-  --border: #1f2937;
+  /* Paleta inspirada no convite (rosé/creme) */
+  --bg: #fff7f2;            /* creme claro de fundo */
+  --card: #ffffff;          /* cartões claros */
+  --text: #47363b;          /* marrom-ameixa escuro para texto */
+  --text-strong: #2d1f24;   /* versão mais vibrante/contrastante */
+  --muted: #7a6b70;         /* texto secundário */
+  --accent: #d16b86;        /* rosé principal */
+  --accent-2: #f09fb5;      /* rosé claro para gradiente */
+  --danger: #d84e5b;
+  --border: #eadde2;        /* bordas suaves */
 }
 
 * { box-sizing: border-box; }
@@ -16,9 +18,10 @@ html, body { height: 100%; }
 body {
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-  background: radial-gradient(1200px 800px at 80% -10%, rgba(52,211,153,0.08), transparent 60%),
-              radial-gradient(1000px 700px at -10% 0%, rgba(34,211,238,0.09), transparent 60%),
-              var(--bg);
+  background:
+    radial-gradient(900px 600px at 90% -10%, rgba(240,159,181,0.18), transparent 55%),
+    radial-gradient(700px 500px at -10% 0%, rgba(209,107,134,0.10), transparent 55%),
+    var(--bg);
   color: var(--text);
 }
 
@@ -56,13 +59,14 @@ body {
 }
 
 .card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  background: var(--card);
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 14px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  box-shadow: 0 6px 18px rgba(209,107,134,0.08);
 }
 
 .card .thumb {
@@ -87,7 +91,7 @@ body {
   margin-top: auto;
   padding: 10px 12px;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #0b1020;
+  color: #fff;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -101,11 +105,15 @@ body {
 }
 
 .payment {
-  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  background: var(--card);
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 16px;
+  box-shadow: 0 6px 18px (191, 144, 158, 0.08);
 }
+
+.payment h2 { color: var(--text-strong); }
+.payload label { color: var(--text-strong); font-weight: 700; }
 
 .hidden { display: none; }
 
@@ -122,8 +130,8 @@ label { color: var(--muted); font-size: 13px; }
 
 input, textarea {
   width: 100%;
-  background: #0b1020;
-  color: var(--text);
+  background: #fff;
+  color: var(--text-strong);
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 10px 12px;
@@ -144,7 +152,7 @@ textarea { min-height: 120px; resize: vertical; }
 #qrcode { 
   display: grid;
   place-items: center;
-  background: #0b1020;
+  background: #fff;
   border: 1px dashed var(--border);
   border-radius: 10px;
   padding: 10px;
@@ -157,16 +165,21 @@ textarea { min-height: 120px; resize: vertical; }
   margin-top: 8px;
 }
 
-button {
+button, a.button, a.secondary {
   padding: 10px 12px;
   border-radius: 10px;
   border: 1px solid var(--border);
-  background: #141b2f;
-  color: var(--text);
+  background: #a45679;
+  color: var(--text-strong);
   cursor: pointer;
 }
 
-button.secondary { background: #0b1020; }
+button.secondary, a.secondary { 
+  background: #1a0f14; 
+  color: #a45679!important; 
+  border-color: #1a0f14;
+  
+}
 
 .footer { text-align: center; color: var(--muted); padding: 20px; }
 
